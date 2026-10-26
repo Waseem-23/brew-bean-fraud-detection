@@ -1,0 +1,76 @@
+{
+  "selected": "XGBoost (tuned)",
+  "algorithm": "xgboost",
+  "selection_reason": "CV cost tied within one standard error (XGBoost (tuned), RandomForest (tuned)); the faster model was preferred",
+  "params": {
+    "colsample_bytree": 0.5507357714330161,
+    "gamma": 1.9905053073241674,
+    "learning_rate": 0.020276027901752574,
+    "max_depth": 3,
+    "min_child_weight": 2,
+    "reg_alpha": 0.36249296491007865,
+    "reg_lambda": 3.1636061718162805,
+    "scale_pos_weight": 1,
+    "subsample": 0.6703701010709381
+  },
+  "n_estimators": 243,
+  "threshold": 0.12,
+  "cost_fn": 100.0,
+  "cost_fp": 10.0,
+  "trained_on_synthetic_data": false,
+  "cv": {
+    "cost_per_1000": 3488.235294117647,
+    "standard_error": 86.55258217389508,
+    "folds": 5
+  },
+  "test": {
+    "total_cost": 1040.0,
+    "test_cost_per_1000": 3466.6666666666665,
+    "tp": 1,
+    "fp": 4,
+    "fn": 10,
+    "tn": 285,
+    "precision": 0.2,
+    "recall": 0.09090909090909091,
+    "test_roc_auc": 0.7065114815979868,
+    "test_pr_auc": 0.08630321237898239
+  },
+  "serving": {
+    "latency_p50_ms": 2.0909999730065465,
+    "latency_p95_ms": 2.352924982551485,
+    "size_kb": 203.65625,
+    "fit_seconds": 0.2862426000647247
+  },
+  "all_candidates_test_cost": {
+    "Logistic Regression (Task 2 baseline recipe)": 1080.0,
+    "XGBoost (tuned)": 1040.0,
+    "RandomForest (tuned)": 1120.0
+  },
+  "features": [
+    "amount",
+    "account_age_days",
+    "order_hour",
+    "high_amount_flag",
+    "customer_txn_velocity_24h",
+    "payment_method_cash_on_delivery",
+    "payment_method_credit_card",
+    "payment_method_debit_card",
+    "payment_method_wallet",
+    "merchant_category_delivery",
+    "merchant_category_dine_in_topup",
+    "merchant_category_gift_card",
+    "merchant_category_subscription",
+    "customer_country_AE",
+    "customer_country_GB",
+    "customer_country_PK",
+    "customer_country_SA",
+    "customer_country_US"
+  ],
+  "trained_at": "2026-10-26T06:51:51+00:00",
+  "versions": {
+    "sklearn": "1.9.1",
+    "xgboost": "3.4.1",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3"
+  }
+}
